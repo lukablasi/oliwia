@@ -1,0 +1,16 @@
+@import 'utils/variables.scss';
+
+header {
+    position: sticky;
+    opacity: 0.8;
+    top: 0px;
+    background-color: $tlo;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    h1 {
+        text-align:center;
+        padding: 20px;
+        font-size: 2em;
+        align-self: end;
+    }
+}
