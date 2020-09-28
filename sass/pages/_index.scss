@@ -10,7 +10,7 @@
 }
 
 .about-brd{
-    
+    margin-top: 2em;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -18,11 +18,32 @@
 }
 
 .middle-brd {
-    background-image: url('../img/business.jpg');
+    background-image: url('../img/business.png');
     background-size: cover;
     height: 100vh;
     width: 100%;
-    
+    color: $fontwhite;
+    ul {
+        font-size: 1.5em;
+        text-align: center;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        li {
+            margin-top: 0.5em;
+            display: list-item;
+            list-style-type: circle;
+            margin-left: 1em;
+        }
+    }
+}
+
+.contact-brd{
+    margin-top: 1em;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
 }
 
 h2 {
