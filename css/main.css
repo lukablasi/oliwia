@@ -25,13 +25,15 @@ time, mark, audio, video {
 
 /* Background pattern from Toptal Subtle Patterns */
 body {
-  background-color: #fefefe;
+  background-color: #f4f4f4;
   font-family: 'News Cycle', sans-serif;
-  background-image: url("../img/ripples.png");
   color: #262626; }
 
 i {
   font-family: 'Dancing Script', cursive; }
+
+a {
+  text-decoration: none; }
 
 @font-face {
   font-family: 'fontello';
@@ -94,11 +96,11 @@ i {
   margin-left: 4vw; }
 
 header {
-  position: sticky;
+  position: relative;
   z-index: 1;
   opacity: 0.8;
   top: 0px;
-  background-color: #fefefe;
+  background-color: #f4f4f4;
   display: grid;
   grid-template-columns: 1fr 1fr; }
   header h1 {
@@ -123,10 +125,10 @@ nav {
       border-left: none; }
 
 .top-brd {
-  background-image: url("../img/front.jpg");
+  background-image: url("../img/oliwia.png");
   background-size: cover;
-  height: 100vh;
-  width: 100%; }
+  width: 100vw;
+  height: 40vh; }
 
 .about-brd {
   margin-top: 2em;
