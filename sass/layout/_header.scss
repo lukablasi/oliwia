@@ -15,4 +15,13 @@ header {
         font-size: 2em;
         align-self: end;
     }
+    a {
+        color: $font;
+    }
+    a:visited {
+        color: $font;
+    }
+    a:hover {
+        color: gray;
+    }
 }
