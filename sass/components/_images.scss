@@ -3,8 +3,14 @@
     display: block;
     position: absolute;
     border-radius: 50%;
-    height: 400px;
-    width: 320px;
-    margin-top: -200px;
+    width: 22vw;
+    margin-top: -150px;
     margin-left: 4vw;
+}
+
+@media screen and (max-width: 800px) {
+    #about {
+        position: static;
+        margin: auto;
+    }
 }
