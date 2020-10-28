@@ -211,7 +211,7 @@ article {
   margin-left: auto;
   margin-right: auto; }
   article .article-img {
-    height: auto;
+    height: 100%;
     width: 100%;
     border-radius: 10px; }
   article .article-title {
@@ -222,5 +222,14 @@ article {
     padding: 10px;
     font-size: 1.2em;
     text-align: justify; }
+
+@media screen and (max-width: 600px) {
+  article {
+    grid-template-columns: 1fr; }
+    article .article-img {
+      height: 40vh; } }
+@media screen and (max-width: 1000px) {
+  article {
+    width: 80vw; } }
 
 /*# sourceMappingURL=main.css.map */
