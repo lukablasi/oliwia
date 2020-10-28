@@ -100,7 +100,8 @@ a {
 @media screen and (max-width: 800px) {
   #about {
     position: static;
-    margin: auto; } }
+    margin: auto;
+    width: 50vw; } }
 header {
   position: relative;
   z-index: 1;
@@ -192,6 +193,15 @@ P {
   margin-left: auto;
   margin-right: auto; }
 
+@media screen and (max-width: 800px) {
+  .about-brd {
+    height: 100%; }
+
+  .middle-brd {
+    height: 100%; }
+
+  .contact-brd {
+    height: 100%; } }
 article {
   color: #4d0538;
   margin-top: 3em;

@@ -67,3 +67,14 @@ P {
     margin-right:auto;
 }
 
+@media screen and (max-width: 800px) {
+    .about-brd {
+        height: 100%;
+    }
+    .middle-brd {
+        height: 100%;
+    }
+    .contact-brd{
+        height: 100%;
+    }
+}
