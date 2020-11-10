@@ -1,3 +1,32 @@
 body {
-    background-color: grey;
+    background-image: url('img/geometry.png');
+    font-family: 'News Cycle', sans-serif;
+    color: #4d0538;
+}
+
+nav a {
+    color: #4d0538;
+    border-right: 1px solid #4d0538;
+    border-left: 1px solid #4d0538;
+}
+
+.main {
+    background-color: #fafafa;
+}
+
+p {
+    line-height: 150%;
+    font-size: 1.1em;
+}
+
+@media only screen and (max-width: 992px) {
+  nav a {
+    color: #4d0538;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #4d0538;
+    }
+    ul li:first-child a {
+    border-top: 1px solid #4d0538;
+    }
 }
