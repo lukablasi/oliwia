@@ -54,23 +54,24 @@ a:hover {
 .arrows {
     height: 70px;
     width: 100%;
+    margin-top: 0.5em;
 }
 
 #portfolio-first {
-    order: 1;
-}
-
-#portfolio-second {
     order: 3;
 }
 
+#portfolio-second {
+    order: 1;
+}
+
 #portfolio-third {
-    order: 4;
+    order: 2;
     
 }
 
 #portfolio-forth {
-    order: 2;
+    order: 4;
 }
 
 .no-decoration a {
