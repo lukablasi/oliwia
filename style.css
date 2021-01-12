@@ -1,42 +1,178 @@
 body {
-    background-image: url('img/geometry.png');
-    font-family: 'News Cycle', sans-serif;
-    color: #4d0538;
+    font-family: 'Unna', serif;
+    color: #392d94;
 }
 
-nav a {
-    color: #4d0538;
-    border-right: 1px solid #4d0538;
-    border-left: 1px solid #4d0538;
+h4 {
+    font-size: 2em;
 }
 
-.main {
-    background-color: #fafafa;
+a {
+    color: #ee81c8;
 }
 
-p {
-    line-height: 150%;
-    font-size: 1.1em;
+a:hover {
+    color: #6c58b0;
 }
 
-@media only screen and (max-width: 992px) {
-  nav a {
-    color: #4d0538;
-    border-right: none;
-    border-left: none;
-    border-bottom: 1px solid #4d0538;
+#heading-background {
+    -webkit-box-shadow: 8px 7px 12px 4px rgba(0,0,0,0.41); 
+    box-shadow: 8px 7px 12px 4px rgba(0,0,0,0.41);
+}
+
+#logo {
+    max-height: 7em;
+    max-width: auto;
+    margin-top: 3em;
+}
+
+
+.navbar {
+    font-size: 2.25em;
+}
+
+.nav-item {
+    margin-left:auto;
+    margin-right:auto;
+    color: #392d94;
+}
+
+.oferta-lista {
+    background-image: url(img/sygnet.svg);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-color: #392d94;
+    color: white;
+    font-size: 20px;
+    padding: 40px;
+}
+
+.bigger-font {
+    font-size: 1.5em;
+}
+
+.arrows {
+    height: 70px;
+    width: 100%;
+}
+
+#portfolio-first {
+    order: 1;
+}
+
+#portfolio-second {
+    order: 3;
+}
+
+#portfolio-third {
+    order: 4;
+    
+}
+
+#portfolio-forth {
+    order: 2;
+}
+
+.no-decoration a {
+    color: #392d94;
+}
+
+.bottom-nav {
+    margin: 1em;
+    font-size: 1.5em;
+}
+
+.social-media {
+    width: 50px;
+    margin: 20px;
+}
+
+.footer {
+    background-color: #392d94;
+    color: white;
+    padding: 2em;
+    font-size: 1.5em;
+}
+
+.logo-poziome {
+    width: 90%;
+}
+
+@media only screen and (min-width: 992px) {
+    #heading-container {
+        margin-bottom: -200px;
     }
-    ul li:first-child a {
-    border-top: 1px solid #4d0538;
+    #heading {
+        position: relative;
+        width: 500px;
+        margin-left: 50px;
+        background-color: white;
+        z-index: 2;
+    }
+    #heading-background {
+        position: relative;
+        width: 70%;
+        height: auto;
+        left: 200px;
+        bottom: 250px;
+        z-index: 1;
+    }
+    .portfolio-title {
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    left: 50px;
+}
+
+.portfolio-picture {
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+    right: 50px;
+    width: 70%;
+    height: auto;
+}
+
+.portfolio-picture img {
+    width: 100%;
+    height: 100%;
+}
+ .arrows {
+    height: 50px;
+    margin-top: 200px;
+    
+}
+    #portfolio-first {
+    order: 1;
+}
+
+#portfolio-second {
+    order: 2;
+}
+
+#portfolio-third {
+    order: 3;
+}
+
+#portfolio-forth {
+    order: 4;
+}
+    .blog-section {
+        width: 75%;
     }
     
-    .post-img {
-        width: 80%;
-        height: 30vh;
-    }
-    .post-img img {
-        height: 100%;
-        width: 100%;
-        
+    .logo-poziome {
+        width: 50%;
     }
 }
+
+/*
+fonty:
+- menu 36 pkt / 2.25 rem
+- slider 48 pkt
+- h2 36 pkt
+- oferta 24 pkt
+- stopka 20 pkt
+- inne 30 pkt
+*/
