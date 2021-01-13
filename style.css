@@ -31,10 +31,11 @@ a:hover {
     font-size: 2.25em;
 }
 
+
 .nav-item {
     margin-left:auto;
     margin-right:auto;
-    color: #392d94;
+    color: #392d94 !important;
 }
 
 .oferta-lista {
@@ -45,6 +46,26 @@ a:hover {
     color: white;
     font-size: 20px;
     padding: 40px;
+}
+
+
+.oferta-carouse {
+    background-size: 100px 100px;
+    background-color: #392d94;
+    color: white;
+    font-size: 20px;
+    width: 100vw;
+    
+}
+
+.oferta-carouse img {
+    height: 300px;
+    padding: 70px; 
+}
+
+.oferta-carouse p {
+    font-size: 20px;
+    margin-top: -150px;
 }
 
 .bigger-font {
