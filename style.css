@@ -3,6 +3,10 @@ body {
     color: #392d94;
 }
 
+.container-fluid {
+    max-width: 1366px;
+}
+
 h4 {
     font-size: 2em;
 }
@@ -15,9 +19,13 @@ a:hover {
     color: #6c58b0;
 }
 
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(57, 45, 148, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
 #heading-background {
-    -webkit-box-shadow: 8px 7px 12px 4px rgba(0,0,0,0.41); 
-    box-shadow: 8px 7px 12px 4px rgba(0,0,0,0.41);
+    -webkit-box-shadow: 8px 7px 12px 4px rgba(0, 0, 0, 0.41);
+    box-shadow: 8px 7px 12px 4px rgba(0, 0, 0, 0.41);
 }
 
 #logo {
@@ -33,9 +41,13 @@ a:hover {
 
 
 .nav-item {
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
     color: #392d94 !important;
+}
+
+.oferta-container {
+        background-color: #392d94;
 }
 
 .oferta-lista {
@@ -55,12 +67,12 @@ a:hover {
     color: white;
     font-size: 20px;
     width: 100vw;
-    
+
 }
 
 .oferta-carouse img {
     height: 300px;
-    padding: 70px; 
+    padding: 70px;
 }
 
 .oferta-carouse p {
@@ -88,7 +100,7 @@ a:hover {
 
 #portfolio-third {
     order: 2;
-    
+
 }
 
 #portfolio-forth {
@@ -100,7 +112,7 @@ a:hover {
 }
 
 .bottom-nav {
-    margin: 1em;
+    
     font-size: 1.5em;
 }
 
@@ -112,18 +124,27 @@ a:hover {
 .footer {
     background-color: #392d94;
     color: white;
-    padding: 2em;
-    font-size: 1.5em;
+    padding: 1em;
 }
 
 .logo-poziome {
     width: 90%;
 }
 
+.dolne-logo-container {
+    margin-bottom: 200px;
+}
+
+.dolne-logo {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
 @media only screen and (min-width: 992px) {
     #heading-container {
         margin-bottom: -200px;
     }
+
     #heading {
         position: relative;
         width: 500px;
@@ -131,6 +152,7 @@ a:hover {
         background-color: white;
         z-index: 2;
     }
+
     #heading-background {
         position: relative;
         width: 70%;
@@ -139,51 +161,55 @@ a:hover {
         bottom: 250px;
         z-index: 1;
     }
+
     .portfolio-title {
-    background-color: white;
-    position: relative;
-    z-index: 2;
-    height: 100%;
-    left: 50px;
-}
+        background-color: white;
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        left: 50px;
+    }
 
-.portfolio-picture {
-    position: relative;
-    z-index: 1;
-    margin-top: 100px;
-    right: 50px;
-    width: 70%;
-    height: auto;
-}
+    .portfolio-picture {
+        position: relative;
+        z-index: 1;
+        margin-top: 100px;
+        right: 50px;
+        width: 70%;
+        height: auto;
+    }
 
-.portfolio-picture img {
-    width: 100%;
-    height: 100%;
-}
- .arrows {
-    height: 50px;
-    margin-top: 200px;
-    
-}
+    .portfolio-picture img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .arrows {
+        height: 50px;
+        margin-top: 200px;
+
+    }
+
     #portfolio-first {
-    order: 1;
-}
+        order: 1;
+    }
 
-#portfolio-second {
-    order: 2;
-}
+    #portfolio-second {
+        order: 2;
+    }
 
-#portfolio-third {
-    order: 3;
-}
+    #portfolio-third {
+        order: 3;
+    }
 
-#portfolio-forth {
-    order: 4;
-}
+    #portfolio-forth {
+        order: 4;
+    }
+
     .blog-section {
         width: 75%;
     }
-    
+
     .logo-poziome {
         width: 50%;
     }

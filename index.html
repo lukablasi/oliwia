@@ -15,17 +15,17 @@
 </head>
 
 <body>
-    <div class='container-fluid'>
-        <div class='container'>
-            <div class='row'>
+    <div>
+        <div class='container-fluid'>
+            <div class='row mb-5'>
                 <div class='col'>
                     <img src="img/01_glowna_LOGO.svg" id='logo' alt="Oliwia Bonarek Logo">
                 </div>
             </div>
 
             <div class='container'>
-                <nav class='navbar navbar-expand-lg navbar-light'>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <nav class='navbar navbar-expand-lg navbar-light my-3'>
+                    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -48,12 +48,15 @@
                     <img src='img/01_glowna_slider-min.png' alt='slider, strona główna' class='img-fluid'>
                 </div>
             </div>
+            
+            <div class='row'>
+                <h3 class='p-3 ml-5 text-center text-lg-left my-3'>Jestem copywriterką. Napiszę dla Ciebie:</h3>
+            </div>
         </div>
 
-            <div class='row'>
-                <h3 class='p-3 ml-5 text-center text-lg-left'>Jestem copywriterką. Napiszę dla Ciebie:</h3>
-            </div>
-            <div class='row d-none d-lg-flex oferta-container'>
+            
+            <div class='d-none d-lg-flex oferta-container'>
+                <div class='row container-fluid m-auto'>
                 <div class='oferta-lista col-md-3'>Stworzę każdy <b>tekst</b>: na www, <b>na landing page, na media społecznościowe,</b> na bloga i inne.</div>
                 <div class='oferta-lista col-md-3'>Napiszę pismo urzędowe, a także: <b>podanie, list gratulacyjny, podziękowanie, kondolencje i in.</b></div>
                 <div class='oferta-lista col-md-3'>Zredaguję <b>Twój tekst,</b> sprawdzę pisownię, przecinki, sformatuję go wg Twoich potrzeb.</div>
@@ -62,6 +65,7 @@
                 <div class='oferta-lista col-md-3'>Poprowadzę Twojego fanpage'a na Facebooku lub Instagramie, napiszę posty, będę moderować komantarze, utworzę grupę fanowską.</div>
                 <div class='oferta-lista col-md-3'>Zrobię rozeznanie cenowe dot. potrzebnego Ci zakupu, zajmę się zamówieniami i kontaktem z usługowcami.</div>
                 <div class='oferta-lista col-md-3'>Stworzę bazę danych, bazy kontaktów, zdobędę dla Ciebie takie informacje, jakich potrzebujesz.</div>
+                </div>
             </div>
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                     <div class='row oferta-carouse d-lg-none'>
@@ -146,15 +150,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class='row text-center text-lg-right p-3 bigger-font'>
+                    <div class='container-fluid'>
+                    <div class='row text-center text-lg-right p-3 bigger-font mt-3'>
                         <div class='col m-auto'>Potrzebujesz czegoś innego?<a class='ml-2' href='kontakt.html'>Skontaktuj się ze mną.</a></div>
+                    </div>
                     </div>
                 </div>
         
                 <div class='container-fluid'>
                     <div class='row'>
                         <div class='col m-auto'>
-                            <h3 class='p-3 ml-4 text-center text-lg-left'>Sprawdź z kim współpracowałam:</h3>
+                            <h3 class='p-3 ml-4 my-5 text-center text-lg-left'>Sprawdź z kim współpracowałam:</h3>
                         </div>
                     </div>
                     <div class='row'>
@@ -171,7 +177,7 @@
                             <img class='arrows' src='img/arrow-righ.svg' onclick='nextSlide()'>
                         </div>
                     </div>
-                    <div class='row text-center text-lg-right p-3 bigger-font'>
+                    <div class='row text-center text-lg-right p-3 bigger-font my-3'>
                         <div class='col'>Sprawdz więcej w <a class='ml-2' href='portfolio.html'>portfolio</a></div>
                     </div>
                 </div>
@@ -179,7 +185,7 @@
                 <div class='container-fluid'>
                     <div class='row'>
                         <div class='col m-auto'>
-                            <h3 class='p-3 ml-4 text-center text-lg-left'>Blog</h3>
+                            <h3 class='p-3 ml-4 my-5 text-center text-lg-left'>Blog</h3>
                         </div>
                     </div>
                     <div class='row m-auto bigger-font blog-section'>
@@ -198,8 +204,8 @@
                     </div>
 
                 </div>
-                <div class='container-fluid'>
-                    <div class='row mt-5'>
+                <div class='container-fluid dolne-logo-container'>
+                    <div class='row dolne-logo'>
                         <img class='img-fluid m-auto logo-poziome' src='img/01_glowna_logo_poziome.svg'>
                     </div>
                     <div class='row bigger-font text-center m-5'>
@@ -210,24 +216,28 @@
                 </div>
                 <div class='container-fluid'>
                     <div class='row'>
-                        <div class='col-12 col-lg-7 no-decoration text-lg-center'>
-                            <a class='bottom-nav' href='#'>O Mnie</a>
-                            <a class='bottom-nav' href='#'>Portfolio</a>
-                            <a class='bottom-nav' href='#'>Kontakt</a>
-                            <a class='bottom-nav' href='#'>Blog</a>
-                            <a class='bottom-nav' href='#'>Oferta</a>
+                        <div class='col-12 col-lg-7 no-decoration d-flex flex-row justify-content-around align-items-center flex-wrap'>
+                            <a class='bottom-nav p-2' href='#'>O Mnie</a>
+                            <a class='bottom-nav p-2' href='#'>Portfolio</a>
+                            <a class='bottom-nav p-2' href='#'>Kontakt</a>
+                            <a class='bottom-nav p-2' href='#'>Blog</a>
+                            <a class='bottom-nav p-2' href='#'>Oferta</a>
                         </div>
-                        <div class='col-12 col-lg-5 text-center'>
+                        <div class='col-12 col-lg-5 text-right d-flex justify-content-center justify-content-lg-end'>
                             <a><img class='social-media' src='img/icon_facebook.svg'></a>
                             <a><img class='social-media' src='img/icon_twitter.svg'></a>
                             <a><img class='social-media' src='img/icon_instagram.svg'></a>
                         </div>
                     </div>
                 </div>
-                <div class='container-fluid'>
-                    <div class='row footer'>
+                <div>
+                    <div class='footer mt-5 pb-5'>
+                        <div class='container-fluid'>
+                            <div class='row'>
                         <div class='col-12 col-lg-6'>OLIWIA BONAREK COPYWRITING &#169; 2021</div>
                         <div class='col-12 col-lg-6 text-lg-right'>DESIGNED BY K. STYCZEŃ</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
