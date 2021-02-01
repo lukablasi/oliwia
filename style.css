@@ -7,6 +7,14 @@ body {
     max-width: 1366px;
 }
 
+h3 a {
+    color: #392d94;;
+} 
+
+h3:hover a {
+    color: #392d94;;
+} 
+
 h4 {
     font-size: 2em;
 }
@@ -15,17 +23,24 @@ a {
     color: #ee81c8;
 }
 
-a:hover {
+a:hover, .nav-item:hover {
     color: #6c58b0;
+    text-decoration: underline;
 }
 
 .custom-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(57, 45, 148, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
+#heading {
+    animation-name: slide-in;
+    animation-duration: 2s;
+}
+
 #heading-background {
     -webkit-box-shadow: 8px 7px 12px 4px rgba(0, 0, 0, 0.41);
     box-shadow: 8px 7px 12px 4px rgba(0, 0, 0, 0.41);
+    animation: slide-in 3s;
 }
 
 #logo {
@@ -46,6 +61,7 @@ a:hover {
     color: #392d94 !important;
 }
 
+/*
 .oferta-container {
         background-color: #392d94;
 }
@@ -78,6 +94,21 @@ a:hover {
 .oferta-carouse p {
     font-size: 20px;
     margin-top: -150px;
+}
+*/
+
+.offer-slide {
+    animation: offer-animation 4s infinite;
+}
+
+.offer-arrow {
+    height: 70px;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.offer-container {
+   min-height: 200px;
 }
 
 .bigger-font {
@@ -119,12 +150,26 @@ a:hover {
 .social-media {
     width: 50px;
     margin: 20px;
+    fill: #ee81c8;
+}
+
+.social-media:hover {
+    fill: #392d94;
 }
 
 .footer {
     background-color: #392d94;
     color: white;
     padding: 1em;
+    letter-spacing: 1px;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: #ee81c8;
 }
 
 .logo-poziome {
@@ -138,6 +183,42 @@ a:hover {
 .dolne-logo {
     margin-top: 70px;
     margin-bottom: 70px;
+}
+
+.appear {
+    transition: opacity 1s;
+}
+
+.appear-mobile {
+    transition: opacity 1s;
+}
+
+.slide-slider {
+    transition: opacity 1s;
+}
+
+.blog-section {
+    transition: opacity 1s;
+    overflow: hidden;
+    position: relative;
+}
+
+.blog-item {
+	width: auto;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.blog-item img {
+	transition: all 0.6s ease-out;
+	position: relative;
+	z-index: 2;
+}
+
+.blog-item:hover img {
+    transform: scale(1.6, 1);
+	z-index: 9;
 }
 
 @media only screen and (min-width: 992px) {
@@ -160,6 +241,7 @@ a:hover {
         left: 200px;
         bottom: 250px;
         z-index: 1;
+        
     }
 
     .portfolio-title {
@@ -213,6 +295,18 @@ a:hover {
     .logo-poziome {
         width: 50%;
     }
+}
+
+@keyframes slide-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes offer-animation {
+    0% {opacity: 0}
+    20% {opacity: 1}
+    80% {opacity: 1}
+    100% {opacity: 0}
 }
 
 /*
