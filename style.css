@@ -1,6 +1,7 @@
 body {
     font-family: 'Unna', serif;
     color: #392d94;
+    background-color: #f8f9f8;
 }
 
 .container-fluid {
@@ -8,11 +9,11 @@ body {
 }
 
 h3 a {
-    color: #392d94;;
+    color: #392d94;
 } 
 
 h3:hover a {
-    color: #392d94;;
+    color: #392d94;
 } 
 
 h4 {
@@ -52,6 +53,7 @@ a:hover, .nav-item:hover {
 
 .navbar {
     font-size: 2.25em;
+    background-color: #f8f9f8;
 }
 
 
@@ -61,21 +63,9 @@ a:hover, .nav-item:hover {
     color: #392d94 !important;
 }
 
-/*
-.oferta-container {
-        background-color: #392d94;
+.carousel-caption {
+    font-size:1px;
 }
-
-.oferta-lista {
-    background-image: url(img/sygnet.svg);
-    background-repeat: no-repeat;
-    background-size: 100px 100px;
-    background-color: #392d94;
-    color: white;
-    font-size: 20px;
-    padding: 40px;
-}
-
 
 .oferta-carouse {
     background-size: 100px 100px;
@@ -86,6 +76,8 @@ a:hover, .nav-item:hover {
 
 }
 
+
+
 .oferta-carouse img {
     height: 300px;
     padding: 70px;
@@ -95,10 +87,9 @@ a:hover, .nav-item:hover {
     font-size: 20px;
     margin-top: -150px;
 }
-*/
 
-.offer-slide {
-    animation: offer-animation 4s infinite;
+.offer-slide-animation {
+    animation: offer-animation 4s infinite linear;
 }
 
 .offer-arrow {
@@ -108,7 +99,12 @@ a:hover, .nav-item:hover {
 }
 
 .offer-container {
-   min-height: 200px;
+   min-height: 300px;
+}
+
+.offer-sygnet img {
+    width: 7%;
+    margin-top: 2em;
 }
 
 .bigger-font {
@@ -295,6 +291,9 @@ a:hover, .nav-item:hover {
     .logo-poziome {
         width: 50%;
     }
+    .carousel {
+    margin-bottom: 200px;
+}
 }
 
 @keyframes slide-in {
@@ -302,13 +301,92 @@ a:hover, .nav-item:hover {
     to {opacity: 1;}
 }
 
-@keyframes offer-animation {
-    0% {opacity: 0}
-    20% {opacity: 1}
-    80% {opacity: 1}
-    100% {opacity: 0}
+/*Offer Slider*/
+@media (min-width: 768px) {
+
+    /* show 3 items */
+    .carousel-inner .active,
+    .carousel-inner .active + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item  {
+        display: block;
+    }
+    
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+    .carousel-item {
+        margin-right: auto !important;
+    }
+   
 }
 
+ .carousel-item {
+        font-size: 23px;
+    }
+
+ /* Bootstrap Lightbox using Modal */
+
+#profile-grid { overflow: auto; white-space: normal; } 
+#profile-grid .profile { padding-bottom: 40px; }
+#profile-grid .panel { padding: 0 }
+#profile-grid .panel-body { padding: 15px }
+#profile-grid .profile-name { font-weight: bold; }
+#profile-grid .thumbnail {margin-bottom:6px;}
+#profile-grid .panel-thumbnail { overflow: hidden; }
+#profile-grid .img-rounded { border-radius: 4px 4px 0 0;}
 /*
 fonty:
 - menu 36 pkt / 2.25 rem
