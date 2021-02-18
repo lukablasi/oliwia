@@ -35,25 +35,52 @@ a:hover, .nav-item:hover {
 
 #heading {
     animation-name: slide-in;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
 
 #heading-background {
     -webkit-box-shadow: 8px 7px 12px 4px rgba(0, 0, 0, 0.41);
     box-shadow: 8px 7px 12px 4px rgba(0, 0, 0, 0.41);
-    animation: slide-in 3s;
+    animation: slide-in 1.5s;
 }
 
 #logo {
     max-height: 7em;
     max-width: auto;
     margin-top: 3em;
+    animation-name: slide-in;
+    animation-duration: 2s;
 }
 
 
 .navbar {
-    font-size: 2.25em;
+    font-size: 1.5em;
     background-color: #f8f9f8;
+}
+
+.nav-item:nth-child(1) {
+    animation-name: slide-in;
+    animation-duration: 1s;
+}
+
+.nav-item:nth-child(2) {
+    animation-name: slide-in;
+    animation-duration: 2s;
+}
+
+.nav-item:nth-child(3) {
+    animation-name: slide-in;
+    animation-duration: 3s;
+}
+
+.nav-item:nth-child(4) {
+    animation-name: slide-in;
+    animation-duration: 3s;
+}
+
+.nav-item:nth-child(5) {
+    animation-name: slide-in;
+    animation-duration: 3s;
 }
 
 
@@ -147,6 +174,7 @@ a:hover, .nav-item:hover {
     width: 50px;
     margin: 20px;
     fill: #ee81c8;
+    margin-top:0;
 }
 
 .social-media:hover {
@@ -209,18 +237,23 @@ a:hover, .nav-item:hover {
 .blog-item img {
 	transition: all 0.6s ease-out;
 	position: relative;
-	z-index: 2;
+	
 }
 
 .blog-item:hover img {
-    transform: scale(1.6, 1);
-	z-index: 9;
+    transform: scale(1.6, 1.6);
+	
 }
 
 @media only screen and (min-width: 992px) {
     #heading-container {
         margin-bottom: -200px;
     }
+    
+    .navbar {
+    font-size: 2.25em;
+    background-color: #f8f9f8;
+}
 
     #heading {
         position: relative;

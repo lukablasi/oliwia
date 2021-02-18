@@ -59,9 +59,10 @@ window.addEventListener("scroll", () => {
     document.querySelector(".appear").style.opacity = opacity;
 });
 
+
 window.addEventListener("scroll", () => {
 const firstCheckpoint = 150;
-const secondCheckpoint = 350;
+const secondCheckpoint = 400;
   const currentScroll = window.pageYOffset;
   if (currentScroll <= firstCheckpoint) {
     opacity = 0 - currentScroll / firstCheckpoint;
@@ -70,8 +71,25 @@ const secondCheckpoint = 350;
   } else {
     opacity = 1;
   }
-  document.querySelector(".offer-container").style.opacity = opacity;
+  document.querySelector("#carousel-heading").style.opacity = opacity;
+  document.querySelector("#carouselExample").style.opacity = opacity;
 });
+
+window.addEventListener("scroll", () => {
+const firstCheckpoint = 600;
+const secondCheckpoint = 950;
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= firstCheckpoint) {
+    opacity = 0 - currentScroll / firstCheckpoint;
+  } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
+    opacity = 0.4;
+  } else {
+    opacity = 1;
+  }
+  document.querySelector("#carousel-footer").style.opacity = opacity;
+  document.querySelector("#portfolio-heading").style.opacity = opacity;
+});
+
 
 window.addEventListener("scroll", () => {
     const firstCheckpoint = 850;
@@ -88,6 +106,21 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("scroll", () => {
+const firstCheckpoint = 1550;
+const secondCheckpoint = 1750;
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= firstCheckpoint) {
+    opacity = 0 - currentScroll / firstCheckpoint;
+  } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
+    opacity = 0.4;
+  } else {
+    opacity = 1;
+  }
+  document.querySelector("#portfolio-footer").style.opacity = opacity;
+  document.querySelector("#blog-heading").style.opacity = opacity;
+});
+
+window.addEventListener("scroll", () => {
     const firstCheckpoint = 1550;
     const secondCheckpoint = 1750;
     const currentScroll = window.pageYOffset;
@@ -99,6 +132,21 @@ window.addEventListener("scroll", () => {
         opacity = 1;
     }
     document.querySelector(".blog-section").style.opacity = opacity;
+});
+
+window.addEventListener("scroll", () => {
+const firstCheckpoint = 1900;
+const secondCheckpoint = 2500;
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= firstCheckpoint) {
+    opacity = 0 - currentScroll / firstCheckpoint;
+  } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
+    opacity = 0.4;
+  } else {
+    opacity = 1;
+  }
+  document.querySelector("#blog-footer").style.opacity = opacity;
+  document.querySelector(".dolne-logo-container").style.opacity = opacity;
 });
 
 // KONIEC ANIMACJI BLOKOW
