@@ -61,8 +61,8 @@ window.addEventListener("scroll", () => {
 
 
 window.addEventListener("scroll", () => {
-const firstCheckpoint = 150;
-const secondCheckpoint = 400;
+const firstCheckpoint = 100;
+const secondCheckpoint = 300;
   const currentScroll = window.pageYOffset;
   if (currentScroll <= firstCheckpoint) {
     opacity = 0 - currentScroll / firstCheckpoint;
@@ -71,13 +71,12 @@ const secondCheckpoint = 400;
   } else {
     opacity = 1;
   }
-  document.querySelector("#carousel-heading").style.opacity = opacity;
   document.querySelector("#carouselExample").style.opacity = opacity;
 });
 
 window.addEventListener("scroll", () => {
-const firstCheckpoint = 600;
-const secondCheckpoint = 950;
+const firstCheckpoint = 550;
+const secondCheckpoint = 750;
   const currentScroll = window.pageYOffset;
   if (currentScroll <= firstCheckpoint) {
     opacity = 0 - currentScroll / firstCheckpoint;
@@ -106,8 +105,8 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("scroll", () => {
-const firstCheckpoint = 1550;
-const secondCheckpoint = 1750;
+const firstCheckpoint = 1400;
+const secondCheckpoint = 1600;
   const currentScroll = window.pageYOffset;
   if (currentScroll <= firstCheckpoint) {
     opacity = 0 - currentScroll / firstCheckpoint;
@@ -135,8 +134,8 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("scroll", () => {
-const firstCheckpoint = 1900;
-const secondCheckpoint = 2500;
+const firstCheckpoint = 1500;
+const secondCheckpoint = 2300;
   const currentScroll = window.pageYOffset;
   if (currentScroll <= firstCheckpoint) {
     opacity = 0 - currentScroll / firstCheckpoint;
