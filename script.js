@@ -1,63 +1,59 @@
-//const firstSlide = {
-//    text: 'Text pierwszy',
-//    picture: 'img/01_glowna_portfolio-1-min.png'
-//};
-//
-//const secondSlide = {
-//    text: 'Text drugi',
-//    picture: 'img/01_glowna_portfolio-1-min.png'
-//};
-//
-//const thirdSlide = {
-//    text: 'Text trzeci',
-//    picture: 'img/01_glowna_portfolio-1-min.png'
-//};
-//
-//const sliderText = document.getElementById('portfolio-second');
-//const sliderPicture = document.getElementById('portfolio-third');
-//
-//const sliders = [firstSlide, secondSlide, thirdSlide];
-//
-//sliderText.innerHTML = sliders[0].text;
-//sliderPicture.innerHTML = `<img class='shadow-lg img-fluid' src='${sliders[0].picture}'>`;
-//
-//let i = 0;
-//
-//document.getElementById('portfolio-forth').addEventListener('click', () => {
-//        i++;
-//        if (i > sliders.length - 1) {
-//        i = 0;
-//        sliderText.innerHTML = sliders[i].text;
-//        } else {
-//        sliderText.innerHTML = sliders[i].text;
-//        }
-//});
-//
-//document.getElementById('portfolio-first').addEventListener('click', () => {
-//        i--;
-//        if (i < 0) {
-//        i = sliders.length - 1;
-//        sliderText.innerHTML = sliders[i].text;
-//        } else {
-//        sliderText.innerHTML = sliders[i].text;
-//        }
-//});
+function createSlider() {
 
-// ANIMACJE - POJAWIANIE SIE BLOKOW
+const firstSlide = {
+    mainText: 'Blog firmowy dla firmy XXX, branża taka i śmaka',
+    mainPicture: 'img/01_glowna_portfolio-1-min.png',
+    secondText: 'Klient XXX, sprawdź www',
+    secondPicture: 'img/01_glowna_portfolio-1-min.png'
+};
 
-window.addEventListener("scroll", () => {
-    const firstCheckpoint = 150;
-    const secondCheckpoint = 350;
-    const currentScroll = window.pageYOffset;
-    if (currentScroll <= firstCheckpoint) {
-        opacity = 0 - currentScroll / firstCheckpoint;
-    } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
-        opacity = 0.4;
-    } else {
-        opacity = 1;
-    }
-    document.querySelector(".appear").style.opacity = opacity;
+const secondSlide = {
+    mainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    mainPicture: 'img/01_glowna_portfolio-1-min.png',
+    secondText: 'Vestibulum tincidunt auctor enim',
+    secondPicture: 'img/01_glowna_portfolio-1-min.png'
+};
+
+const thirdSlide = {
+    mainText: 'Morbi id volutpat purus. Nam ut urna finibus, cursus massa a, laoreet urna.',
+    mainPicture: 'img/01_glowna_portfolio-1-min.png',
+    secondText: 'Cras aliquam odio a ex condimentum',
+    secondPicture: 'img/01_glowna_portfolio-1-min.png'
+};
+
+const mainPicture = document.getElementById('portfolioMainPicture');
+const secondPicture = document.getElementById('portfolioSecondPicture');
+const mainText = document.getElementById('portfolioMainText');
+const secondText = document.getElementById('portfolioSecondText');
+
+const sliders = [firstSlide, secondSlide, thirdSlide];
+mainText.innerHTML = sliders[0].mainText;
+mainPicture.innerHTML = `<img class='shadow-lg img-fluid' src='${sliders[0].mainPicture}'>`;
+secondText.innerHTML = sliders[0].secondText;
+secondPicture.innerHTML = `<img class='shadow-lg img-fluid' src='${sliders[0].secondPicture}'>`;
+
+let i = 0;
+
+document.querySelector('.arrows').addEventListener('click', () => {
+        i++;
+        if (i > sliders.length - 1) {
+        i = 0;
+mainText.innerHTML = `<p class='slideIn'>${sliders[i].mainText}</p>`;
+mainPicture.innerHTML = `<img class='shadow-lg img-fluid slideIn' src='${sliders[i].mainPicture}'>`;
+secondText.innerHTML = `<p class='slideIn'>${sliders[i].secondText}</p>`;
+secondPicture.innerHTML = `<img class='shadow-lg img-fluid slideIn' src='${sliders[i].secondPicture}'>`;
+        } else {
+mainText.innerHTML = `<p class='slideIn'>${sliders[i].mainText}</p>`;
+mainPicture.innerHTML = `<img class='shadow-lg img-fluid slideIn' src='${sliders[i].mainPicture}'>`;
+secondText.innerHTML = `<p class='slideIn'>${sliders[i].secondText}</p>`;
+secondPicture.innerHTML = `<img class='shadow-lg img-fluid slideIn' src='${sliders[i].secondPicture}'>`;
+        }
 });
+
+};
+
+createSlider();
+// ANIMACJE - POJAWIANIE SIE BLOKOW
 
 
 window.addEventListener("scroll", () => {
@@ -91,22 +87,8 @@ const secondCheckpoint = 750;
 
 
 window.addEventListener("scroll", () => {
-    const firstCheckpoint = 850;
-    const secondCheckpoint = 1050;
-    const currentScroll = window.pageYOffset;
-    if (currentScroll <= firstCheckpoint) {
-        opacity = 0 - currentScroll / firstCheckpoint;
-    } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
-        opacity = 0.4;
-    } else {
-        opacity = 1;
-    }
-    document.querySelector(".slide-slider").style.opacity = opacity;
-});
-
-window.addEventListener("scroll", () => {
-const firstCheckpoint = 1400;
-const secondCheckpoint = 1600;
+const firstCheckpoint = 1500;
+const secondCheckpoint = 1700;
   const currentScroll = window.pageYOffset;
   if (currentScroll <= firstCheckpoint) {
     opacity = 0 - currentScroll / firstCheckpoint;
@@ -115,7 +97,6 @@ const secondCheckpoint = 1600;
   } else {
     opacity = 1;
   }
-  document.querySelector("#portfolio-footer").style.opacity = opacity;
   document.querySelector("#blog-heading").style.opacity = opacity;
 });
 
