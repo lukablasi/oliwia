@@ -2,33 +2,28 @@ function createSlider() {
 
 const firstSlide = {
     mainText: 'Blog firmowy dla firmy XXX, branża taka i śmaka',
-    mainPicture: 'img/01_glowna_portfolio-1-min.png',
     secondText: 'Klient XXX, sprawdź www',
     secondPicture: 'img/01_glowna_portfolio-1-min.png'
 };
 
 const secondSlide = {
     mainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    mainPicture: 'img/01_glowna_portfolio-1-min.png',
     secondText: 'Vestibulum tincidunt auctor enim',
     secondPicture: 'img/01_glowna_portfolio-1-min.png'
 };
 
 const thirdSlide = {
     mainText: 'Morbi id volutpat purus. Nam ut urna finibus, cursus massa a, laoreet urna.',
-    mainPicture: 'img/01_glowna_portfolio-1-min.png',
     secondText: 'Cras aliquam odio a ex condimentum',
     secondPicture: 'img/01_glowna_portfolio-1-min.png'
 };
 
-const mainPicture = document.getElementById('portfolioMainPicture');
 const secondPicture = document.getElementById('portfolioSecondPicture');
 const mainText = document.getElementById('portfolioMainText');
 const secondText = document.getElementById('portfolioSecondText');
 
 const sliders = [firstSlide, secondSlide, thirdSlide];
 mainText.innerHTML = sliders[0].mainText;
-mainPicture.innerHTML = `<img class='shadow-lg img-fluid' src='${sliders[0].mainPicture}'>`;
 secondText.innerHTML = sliders[0].secondText;
 secondPicture.innerHTML = `<img class='shadow-lg img-fluid' src='${sliders[0].secondPicture}'>`;
 
@@ -39,12 +34,10 @@ document.querySelector('.arrows').addEventListener('click', () => {
         if (i > sliders.length - 1) {
         i = 0;
 mainText.innerHTML = `<p class='slideIn'>${sliders[i].mainText}</p>`;
-mainPicture.innerHTML = `<img class='shadow-lg img-fluid slideIn' src='${sliders[i].mainPicture}'>`;
 secondText.innerHTML = `<p class='slideIn'>${sliders[i].secondText}</p>`;
 secondPicture.innerHTML = `<img class='shadow-lg img-fluid slideIn' src='${sliders[i].secondPicture}'>`;
         } else {
 mainText.innerHTML = `<p class='slideIn'>${sliders[i].mainText}</p>`;
-mainPicture.innerHTML = `<img class='shadow-lg img-fluid slideIn' src='${sliders[i].mainPicture}'>`;
 secondText.innerHTML = `<p class='slideIn'>${sliders[i].secondText}</p>`;
 secondPicture.innerHTML = `<img class='shadow-lg img-fluid slideIn' src='${sliders[i].secondPicture}'>`;
         }

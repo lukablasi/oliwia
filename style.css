@@ -10,6 +10,7 @@ body {
     max-width: 1366px;
 }
 
+
 h3 a {
     color: #392d94;
 }
@@ -100,11 +101,6 @@ a:hover,
     margin-left: auto;
     margin-right: auto;
     color: #392d94 !important;
-    transition: all 0.5s
-}
-
-.nav-item:hover {
-    transform: scale(1.2, 1.2);
 }
 
 #carousel-heading {
@@ -112,21 +108,9 @@ a:hover,
     animation-duration: 3.5s;
 }
 
-.shake {
-    display: inline-block;
-    animation: shake 4s infinite;
-}
-
-.container-slider {
-        
-    }
 
 #portfolioMainPicture {
     width: 100%;
-    }
-
-    #portfolioSecondPicture {
-        
     }
     
     .portfolio-subContainer{
@@ -143,7 +127,7 @@ a:hover,
     }
 
     .arrows {
-        height: 30px;
+        height: 20px;
         float: right;
     }
 
@@ -240,7 +224,7 @@ a:hover,
 }
 
 .dolne-logo-container {
-    margin-bottom: 200px;
+    font-size: 1.1em;
 }
 
 .dolne-logo {
@@ -280,6 +264,42 @@ a:hover,
 
 }
 
+/*
+.
+.
+Aboue Me
+.
+.
+*/
+
+
+.aboutme-card {
+    font-size: 1.8em;
+    height: 200px;
+}
+
+.aboutme-picture {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.aboutme-picture img {
+    height: auto;
+    width: 100%;
+}
+
+
+/*
+.
+.
+Blog
+.
+.
+*/
+
+
+
 @media only screen and (min-width: 992px) {
     #heading-container {
         position: relative;
@@ -304,6 +324,7 @@ a:hover,
     #heading-background {
         max-width: 100%;
     }
+    
 
     .blog-section {
         width: 75%;
@@ -314,7 +335,8 @@ a:hover,
     }
 
     .carousel {
-        margin-bottom: 200px;
+        margin-bottom: 150px;
+        min-height: 300px;
     }
 
     .container-slider {
@@ -324,7 +346,7 @@ a:hover,
 
     #portfolioMainPicture {
         width: 50%;
-        height: 500px;
+        height: 100%;
     }
 
     #portfolioSecondPicture {
@@ -338,7 +360,9 @@ a:hover,
     .portfolio-subContainer{
         position: absolute;
         right: 7%;
-        top: 70%;
+        bottom: 0;
+        max-width: 250px;
+
     }
 
     #portfolioMainText {
@@ -358,14 +382,59 @@ a:hover,
 
     #portfolioSecondText {
         font-size: 1.7em;
-        margin-right: 1em;
-        max-width: 215px;
+        max-width: 190px;
     }
+    
+    .arrows{
+        position: absolute;
+        right: 0;
+        top: 40%;
+    }
+    
+    
+    .dolne-logo-container {
+    margin-bottom: 200px;
+}
+    /*
+.
+.
+Aboue Me
+.
+.
+*/
+    .container-aboutme {
+    height: 600px;
+    position: relative;
+}
+    
+    .aboutme-text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+    .aboutme-card {
+    position: absolute;
+        width: 400px;
+        height: 250px;
+        top: 20%;
+        left: 50%;
+        margin-top: -125px;
+        margin-left: -200px;
+        z-index: 1;
+        background-color: white;
+        text-align: center;
+        padding: 40px;
+        font-size: 1.8em;
+}
+    .aboutme-picture {
+    position: absolute;
+    bottom: 0;
+}
 
-    .arrows {
-        height: 60px;
-        vertical-align: top;
-    }
+.aboutme-picture img {
+    height: 80%;
+    width: 100%;
+}
 }
 
 @keyframes slide-in {
@@ -375,28 +444,6 @@ a:hover,
 
     to {
         opacity: 1;
-    }
-}
-
-@keyframes shake {
-    0% {
-        transform: skewY(0deg)
-    }
-
-    45% {
-        transform: skewY(0deg)
-    }
-
-    50% {
-        transform: skewY(-15deg)
-    }
-
-    55% {
-        transform: skewY(0deg)
-    }
-
-    100% {
-        transform: skewY(0deg)
     }
 }
 
