@@ -1,20 +1,32 @@
 function createSlider() {
 
 const firstSlide = {
-    mainText: 'Blog firmowy dla firmy XXX, branża taka i śmaka',
-    secondText: 'Klient XXX, sprawdź www',
-    secondPicture: 'img/01_glowna_portfolio-1-min.png'
+    mainText: 'Prowadzenie bloga; meble dziecięce.',
+    secondText: 'Teksty na landing page; chemia samochodowa.',
+    secondPicture: 'img/kutikai.jpg'
 };
 
 const secondSlide = {
-    mainText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    secondText: 'Vestibulum tincidunt auctor enim',
+    mainText: 'Teksty na landing page; chemia samochodowa.',
+    secondText: 'Prowadzenie bloga, opisy kategorii; noże, outdoor, survival.',
     secondPicture: 'img/01_glowna_portfolio-1-min.png'
 };
 
 const thirdSlide = {
-    mainText: 'Morbi id volutpat purus. Nam ut urna finibus, cursus massa a, laoreet urna.',
-    secondText: 'Cras aliquam odio a ex condimentum',
+    mainText: 'Prowadzenie bloga, opisy kategorii; noże, outdoor, survival.',
+    secondText: 'Teksty na www;<br> serwis erotyczny.',
+    secondPicture: 'img/01_glowna_portfolio-1-min.png'
+};
+    
+const fourthSlide = {
+    mainText: 'Teksty na www;<br> serwis erotyczny.',
+    secondText: 'Opisy kategorii; narzędzia.',
+    secondPicture: 'img/01_glowna_portfolio-1-min.png'
+};
+
+const fifthSlide = {
+    mainText: 'Opisy kategorii; narzędzia.',
+    secondText: 'Prowadzenie bloga; meble dziecięce.',
     secondPicture: 'img/01_glowna_portfolio-1-min.png'
 };
 
@@ -22,7 +34,7 @@ const secondPicture = document.getElementById('portfolioSecondPicture');
 const mainText = document.getElementById('portfolioMainText');
 const secondText = document.getElementById('portfolioSecondText');
 
-const sliders = [firstSlide, secondSlide, thirdSlide];
+const sliders = [firstSlide, secondSlide, thirdSlide, fourthSlide, fifthSlide];
 mainText.innerHTML = sliders[0].mainText;
 secondText.innerHTML = sliders[0].secondText;
 secondPicture.innerHTML = `<img class='shadow-lg img-fluid' src='${sliders[0].secondPicture}'>`;
@@ -108,8 +120,8 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("scroll", () => {
-const firstCheckpoint = 1500;
-const secondCheckpoint = 2300;
+const firstCheckpoint = 2100;
+const secondCheckpoint = 2200;
   const currentScroll = window.pageYOffset;
   if (currentScroll <= firstCheckpoint) {
     opacity = 0 - currentScroll / firstCheckpoint;
@@ -272,3 +284,6 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
     });
 
   });
+
+
+
