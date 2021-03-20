@@ -4,6 +4,7 @@ body {
     background-color: #f8f9f8;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .container-fluid {
@@ -39,6 +40,34 @@ a:hover,
 
 .slideIn {
     animation: slide-in 1.5s;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+
+.from-left {
+    transform: translateX(-10%);
+    transition: opacity 700ms ease-in, transform 800ms ease-in;
+    opacity: 0;
+}
+
+
+.from-right {
+    transform: translateX(10%);
+    transition: opacity 1000ms ease-in, transform 800ms ease-in;
+    opacity: 0;
+}
+
+.from-left.show,
+.from-right.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.fade-in.show {
+    opacity: 1;
 }
 
 #heading {
@@ -117,6 +146,7 @@ a:hover,
     
     .portfolio-subContainer{
         padding: 20px;
+        max-width: 90%;
     }
 
     #portfolioMainText {
@@ -130,7 +160,8 @@ a:hover,
 
     .arrows {
         height: 20px;
-        float: right;
+        right: 20px;
+        position: absolute;
     }
 
 .carousel-caption {

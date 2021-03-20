@@ -60,79 +60,104 @@ secondPicture.innerHTML = `<img class='shadow-lg img-fluid slideIn' src='${slide
 createSlider();
 // ANIMACJE - POJAWIANIE SIE BLOKOW
 
+const faders = document.querySelectorAll('.fade-in');
+const from = document.querySelectorAll('.from');
 
-window.addEventListener("scroll", () => {
-const firstCheckpoint = 100;
-const secondCheckpoint = 300;
-  const currentScroll = window.pageYOffset;
-  if (currentScroll <= firstCheckpoint) {
-    opacity = 0 - currentScroll / firstCheckpoint;
-  } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
-    opacity = 0.4;
-  } else {
-    opacity = 1;
-  }
-  document.querySelector("#carouselExample").style.opacity = opacity;
+const appearOptions = {
+    threshold: 0.5
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('show');
+            appearOnScroll.unobserve(entry.target);
+        }
+    })
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
 });
 
-window.addEventListener("scroll", () => {
-const firstCheckpoint = 550;
-const secondCheckpoint = 750;
-  const currentScroll = window.pageYOffset;
-  if (currentScroll <= firstCheckpoint) {
-    opacity = 0 - currentScroll / firstCheckpoint;
-  } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
-    opacity = 0.4;
-  } else {
-    opacity = 1;
-  }
-  document.querySelector("#carousel-footer").style.opacity = opacity;
-  document.querySelector("#portfolio-heading").style.opacity = opacity;
+from.forEach(from => {
+    appearOnScroll.observe(from);
 });
 
-
-window.addEventListener("scroll", () => {
-const firstCheckpoint = 1500;
-const secondCheckpoint = 1700;
-  const currentScroll = window.pageYOffset;
-  if (currentScroll <= firstCheckpoint) {
-    opacity = 0 - currentScroll / firstCheckpoint;
-  } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
-    opacity = 0.4;
-  } else {
-    opacity = 1;
-  }
-  document.querySelector("#blog-heading").style.opacity = opacity;
-});
-
-window.addEventListener("scroll", () => {
-    const firstCheckpoint = 1550;
-    const secondCheckpoint = 1750;
-    const currentScroll = window.pageYOffset;
-    if (currentScroll <= firstCheckpoint) {
-        opacity = 0 - currentScroll / firstCheckpoint;
-    } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
-        opacity = 0.4;
-    } else {
-        opacity = 1;
-    }
-    document.querySelector(".blog-section").style.opacity = opacity;
-});
-
-window.addEventListener("scroll", () => {
-const firstCheckpoint = 2100;
-const secondCheckpoint = 2200;
-  const currentScroll = window.pageYOffset;
-  if (currentScroll <= firstCheckpoint) {
-    opacity = 0 - currentScroll / firstCheckpoint;
-  } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
-    opacity = 0.4;
-  } else {
-    opacity = 1;
-  }
-  document.querySelector("#blog-footer").style.opacity = opacity;
-  document.querySelector(".dolne-logo-container").style.opacity = opacity;
-});
+//window.addEventListener("scroll", () => {
+//const firstCheckpoint = 100;
+//const secondCheckpoint = 300;
+//  const currentScroll = window.pageYOffset;
+//  if (currentScroll <= firstCheckpoint) {
+//    opacity = 0 - currentScroll / firstCheckpoint;
+//  } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
+//    opacity = 0.4;
+//  } else {
+//    opacity = 1;
+//  }
+//  document.querySelector("#carouselExample").style.opacity = opacity;
+//});
+//
+//window.addEventListener("scroll", () => {
+//const firstCheckpoint = 550;
+//const secondCheckpoint = 750;
+//  const currentScroll = window.pageYOffset;
+//  if (currentScroll <= firstCheckpoint) {
+//    opacity = 0 - currentScroll / firstCheckpoint;
+//  } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
+//    opacity = 0.4;
+//  } else {
+//    opacity = 1;
+//  }
+//  document.querySelector("#carousel-footer").style.opacity = opacity;
+//  document.querySelector("#portfolio-heading").style.opacity = opacity;
+//});
+//
+//
+//window.addEventListener("scroll", () => {
+//const firstCheckpoint = 1500;
+//const secondCheckpoint = 1700;
+//  const currentScroll = window.pageYOffset;
+//  if (currentScroll <= firstCheckpoint) {
+//    opacity = 0 - currentScroll / firstCheckpoint;
+//  } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
+//    opacity = 0.4;
+//  } else {
+//    opacity = 1;
+//  }
+//  document.querySelector("#blog-heading").style.opacity = opacity;
+//});
+//
+//window.addEventListener("scroll", () => {
+//    const firstCheckpoint = 1550;
+//    const secondCheckpoint = 1750;
+//    const currentScroll = window.pageYOffset;
+//    if (currentScroll <= firstCheckpoint) {
+//        opacity = 0 - currentScroll / firstCheckpoint;
+//    } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
+//        opacity = 0.4;
+//    } else {
+//        opacity = 1;
+//    }
+//    document.querySelector(".blog-section").style.opacity = opacity;
+//});
+//
+//window.addEventListener("scroll", () => {
+//const firstCheckpoint = 2100;
+//const secondCheckpoint = 2200;
+//  const currentScroll = window.pageYOffset;
+//  if (currentScroll <= firstCheckpoint) {
+//    opacity = 0 - currentScroll / firstCheckpoint;
+//  } else if (currentScroll > firstCheckpoint && currentScroll < secondCheckpoint) {
+//    opacity = 0.4;
+//  } else {
+//    opacity = 1;
+//  }
+//  document.querySelector("#blog-footer").style.opacity = opacity;
+//  document.querySelector(".dolne-logo-container").style.opacity = opacity;
+//});
 
 // KONIEC ANIMACJI BLOKOW
 
