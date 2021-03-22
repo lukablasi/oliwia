@@ -361,6 +361,7 @@ Blog
     #heading-container {
         position: relative;
         margin: 0;
+        margin-top: 20px;
         padding: 0;
     }
 
@@ -371,11 +372,11 @@ Blog
 
     #heading {
         position: absolute;
-        width: 400px;
+        width: 330px;
         margin-left: 15vw;
         margin-top: -20px;
         background-color: white;
-        z-index: 2;
+        z-index: 1000000;
     }
 
     #heading-background {
@@ -447,6 +448,9 @@ Blog
         bottom: 100px;
     }
     
+    .bottom-nav {
+        width: 70%
+    }
     
     .dolne-logo-container {
     margin-bottom: 200px;
